@@ -47,6 +47,8 @@ test edin.
                 .body(requelsBody.toString())
                 .post(url);
 
+        response.prettyPrint();
+
         //4- assertion
 
         response
@@ -57,6 +59,8 @@ test edin.
                 .body("title", Matchers.equalTo("API"))
                 .body("userId", Matchers.lessThan(100))
                 .body("body",Matchers.containsString("API"));
+
+
 
 
     }
